@@ -15,12 +15,17 @@ If you have too few points (N < about 5) estimating statistics like the expected
 
 ## Understanding expected max performance
 The X-axis represents the number of hyperparameter trials (or time, if the average time for the experiments is included).
+
 The Y-axis represents the expected performance for a given X (number of hyperparameter trials).
+
 The leftmost point on the curve (X = 1) is the average across the N validation scores.
+
 The shading is +/- the sample standard error (shaded within the observed min and max).
+
 If two curves are plotted and they cross, then the best-performing model depends on the budget. Simply saying "Model A outperforms Model B" is ill-defined.
 
 
 ## Usage
 To generate expected max curves, put a list containing the performance (accuracy, F1, or your measure of choice) of the N trained models on validation data in the main method within plot.py.
+
 The code has a few options for better visualization: 1) log-scale the X-axis, 2) shade the variance (when comparing multiple curves the shading can be distracting), and 3) scaling the X-axis with the average runtime (when comparing approaches with very different run times, it can be more appropriate to scale by total time spent rather than number of trials).
