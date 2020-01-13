@@ -12,9 +12,9 @@ The Y-axis represents the expected performance for a given X (number of hyperpar
 
 The leftmost point on the curve (X = 1) is the average across the N validation scores.
 
-The shading is +/- the sample standard error (shaded within the observed min and max).
+The shading is +/- the sample standard error (which is similar to the standard deviation), not shaded outside the observed min and max.
 
-If two curves are plotted and they cross, then the best-performing model depends on the budget. Simply saying "Model A outperforms Model B" is ill-defined.
+If two curves cross, then the best-performing model depends on the budget. Simply saying "Model A outperforms Model B" is ill-defined.
 
 
 ## Assumptions
