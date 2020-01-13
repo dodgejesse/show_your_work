@@ -1,6 +1,6 @@
 # Show Your Work: Improved Reporting of Experimental Results
 
-This repository contains code for computing expected max validation performance curves as introduced in [_Show Your Work: Improved Reporting of Experimental Information_][https://arxiv.org/abs/1909.03004].
+This repository contains code for computing expected max validation performance curves as introduced in [_Show Your Work: Improved Reporting of Experimental Information_](https://arxiv.org/abs/1909.03004).
 
 Machine learning and NLP research often involves searching over hyperparameters. Most commonly this is done by training N models on a set of training data, evaluating each of the N models on a held-out validation set, and choosing the best of the N models to evaluate on a test set. Often, this final test number is all that's reported, but there is a lot of useful information in the other experiments. The code in this repository is meant as a way to visualize the N validation results.
 
@@ -8,7 +8,7 @@ Machine learning and NLP research often involves searching over hyperparameters.
 ## Assumptions
 This was designed as a tool for reporting the expected max performance for budgets n <= N. We leave forecasting performance with larger budgets (n > N) to future work.
 
-This method for computing expected max performance assumes I.I.D. draws. In practice, that means it's appropriate when using random search for hyperparameter optimization, as recommended [here][http://www.jmlr.org/papers/volume13/bergstra12a/bergstra12a.pdf]. The calculation of the expected max may not be correct if the hyperparameters were chosen using manual search, grid search, or Bayesian optimization.
+This method for computing expected max performance assumes I.I.D. draws. In practice, that means it's appropriate when using random search for hyperparameter optimization, as recommended in general [here](http://www.jmlr.org/papers/volume13/bergstra12a/bergstra12a.pdf). The calculation of the expected max may not be correct if the hyperparameters were chosen using manual search, grid search, or Bayesian optimization.
 
 If you have too few points (N < about 5) estimating statistics like the expected max might not be a good idea, and you shoud just report the values.
 
