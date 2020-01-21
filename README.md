@@ -1,3 +1,9 @@
+## Usage
+To generate expected max curves, put a list containing the performance (accuracy, F1, or your measure of choice) of the N trained models on validation data in the main method within plot.py.
+
+The code has a few options for better visualization: 1) log-scale the X-axis, 2) shade the variance (when comparing multiple curves the shading can be distracting), and 3) scaling the X-axis with the average runtime (when comparing approaches with very different run times, it can be more appropriate to scale by total time spent rather than number of trials).
+
+
 # Show Your Work: Improved Reporting of Experimental Results
 
 This repository contains code for computing expected max validation performance curves as introduced in [_Show Your Work: Improved Reporting of Experimental Information_](https://arxiv.org/abs/1909.03004).
@@ -23,12 +29,6 @@ This was designed as a tool for reporting the expected max performance for budge
 This method for computing expected max performance assumes I.I.D. draws. In practice, that means it's appropriate when using random search for hyperparameter optimization, as recommended in general [here](http://www.jmlr.org/papers/volume13/bergstra12a/bergstra12a.pdf). The calculation of the expected max may not be correct if the hyperparameters were chosen using manual search, grid search, or Bayesian optimization.
 
 If you have too few points estimating statistics like the expected max might not be a good idea, and you shoud just report the values.
-
-
-## Usage
-To generate expected max curves, put a list containing the performance (accuracy, F1, or your measure of choice) of the N trained models on validation data in the main method within plot.py.
-
-The code has a few options for better visualization: 1) log-scale the X-axis, 2) shade the variance (when comparing multiple curves the shading can be distracting), and 3) scaling the X-axis with the average runtime (when comparing approaches with very different run times, it can be more appropriate to scale by total time spent rather than number of trials).
 
 
 ## Citation
