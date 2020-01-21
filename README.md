@@ -8,7 +8,7 @@ Machine learning and NLP research often involves searching over hyperparameters.
 ## Understanding expected max performance
 The X-axis represents the number of hyperparameter trials (or time, if the average time for the experiments is included).
 
-The Y-axis represents the expected performance for a given X (number of hyperparameter trials).
+The Y-axis represents the expected max performance for a given X (number of hyperparameter trials). "If I train X models, what is the expected performance of the best one?"
 
 The leftmost point on the curve (X = 1) is the average across the N validation scores.
 
